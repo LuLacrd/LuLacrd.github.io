@@ -3,7 +3,7 @@ const photos = [
   {
     src: 'images/Inner photos/Caderninhos.jpg',
     title: 'Encontro com as professoras',
-    description: 'Sempre me enche o coração poder me encontrar com mulheres que cuidaram tanto de mim. Esse presente, entregue pela incrível professora Luciana Batteli é a representação das memórias mais doces que poderia ter, o privilégio de ter sido aluna dela. Tudo que sou hoje, e a coragem que preciso para seguir em frente, devo a ela.'
+    description: 'Sempre me enche o coração poder me encontrar com mulheres que cuidaram tanto de mim. Esse presente, entregue pela incrível professora Luciana Battelli é a representação das memórias mais doces que poderia ter, o privilégio de ter sido aluna dela. Tudo que sou hoje, e a coragem que preciso para seguir em frente, devo a ela.'
   },
   {
     src: 'images/Inner photos/conchinhas.jpg',
