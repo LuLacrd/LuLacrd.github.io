@@ -1,0 +1,316 @@
+/* Estilos Gerais */
+body {
+    font-family: 'Arial', sans-serif; /* Define a fonte padrão */
+    margin: 0; /* Remove a margem padrão */
+    padding: 0; /* Remove o padding padrão */
+    background: #f8f8f8 url('images/Fundo projeto nfe.jpg') no-repeat center center fixed; /* Define a imagem de fundo */
+    background-size: cover; /* Faz a imagem de fundo cobrir toda a tela */
+    color: #333; /* Define a cor do texto */
+    display: flex; /* Usa flexbox para o layout */
+    flex-direction: column; /* Define a direção dos itens flexíveis */
+}
+
+html, body {
+    height: 100%; /* Define a altura como 100% */
+    margin: 0; /* Remove a margem padrão */
+}
+
+.page-title {
+    font-size: 6rem !important; /* Ajusta o tamanho da fonte para ser duas vezes maior */
+    font-weight: bold; /* Define o texto como negrito */
+    text-align: left; /* Alinha o texto à esquerda */
+    margin-top: 20px; /* Adiciona margem superior */
+}
+
+/* Layout Principal */
+.container {
+    display: flex; /* Usa flexbox para o layout */
+    justify-content: space-between; /* Espaça os itens igualmente */
+    align-items: center; /* Alinha os itens ao centro */
+    padding: 40px; /* Adiciona padding */
+    height: 590px; /* Define a altura */
+}
+
+/* Seção Esquerda */
+.left-section {
+    text-align: left; /* Alinha o texto à esquerda */
+    max-width: 40%; /* Define a largura máxima */
+    margin-left: 50px; /* Adiciona margem à esquerda */
+}
+
+.left-section h1 {
+    font-size: 3rem; /* Define o tamanho da fonte */
+    line-height: 1.2; /* Define a altura da linha */
+    font-weight: bold; /* Define o texto como negrito */
+    margin: 0; /* Remove a margem */
+    color: #000; /* Define a cor do texto */
+}
+
+.content {
+    flex: 1; /* Faz o elemento crescer para preencher o espaço disponível */
+}
+
+footer {
+    text-align: center; /* Alinha o texto ao centro */
+    padding: 10px; /* Adiciona padding */
+}
+
+.left-section .byline {
+    margin-top: 10px; /* Adiciona margem superior */
+    font-size: 0.9rem; /* Define o tamanho da fonte */
+    color: #555; /* Define a cor do texto */
+    font-weight: bold; /* Define o texto como negrito */
+}
+
+.social-links {
+    display: flex; /* Usa flexbox para o layout */
+    gap: 15px; /* Define o espaço entre os itens */
+    margin-top: 20px; /* Adiciona margem superior */
+}
+
+.social-links img {
+    width: 30px; /* Define a largura */
+    height: 30px; /* Define a altura */
+    transition: transform 0.3s; /* Adiciona transição para a transformação */
+}
+
+.social-links img:hover {
+    transform: scale(1.1); /* Aumenta a escala ao passar o mouse */
+}
+
+/* Seção Direita */
+.right-section {
+    display: flex; /* Usa flexbox para o layout */
+    flex-direction: column; /* Define a direção dos itens flexíveis */
+    justify-content: center; /* Alinha os itens ao centro */
+    align-items: center; /* Alinha os itens ao centro */
+    margin-right: 50px; /* Adiciona margem à direita */
+    height: 100%; /* Define a altura como 100% */
+}
+
+.images {
+    display: flex; /* Usa flexbox para o layout */
+    gap: 10px; /* Define o espaço entre os itens */
+    justify-content: center; /* Alinha os itens ao centro */
+    margin-bottom: 20px; /* Adiciona margem inferior */
+    border: none !important; /* Remove a borda */
+}
+
+.photo {
+    width: 600px; /* Define a largura */
+    height: auto; /* Define a altura automaticamente */
+    border: none !important; /* Remove a borda */
+    outline: none !important; /* Remove o contorno */
+}
+
+/* Botão Play */
+.play-button {
+    display: inline-block; /* Define o display como inline-block */
+    font-size: 2rem; /* Define o tamanho da fonte */
+    color: #fff; /* Define a cor do texto */
+    background: #000; /* Define a cor de fundo */
+    width: 60px; /* Define a largura */
+    height: 60px; /* Define a altura */
+    line-height: 60px; /* Define a altura da linha */
+    text-align: center; /* Alinha o texto ao centro */
+    border-radius: 50%; /* Define bordas arredondadas */
+    text-decoration: none; /* Remove a decoração do texto */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Adiciona sombra */
+    transition: background 0.3s; /* Adiciona transição para o fundo */
+}
+
+.play-button:hover {
+    background: #333; /* Altera a cor de fundo ao passar o mouse */
+}
+
+.carousel-content {
+    display: flex; /* Usa flexbox para o layout */
+    justify-content: space-between; /* Espaça os itens igualmente */
+    width: 100%; /* Define a largura como 100% */
+    height: 100%; /* Define a altura como 100% */
+}
+
+.carousel-container {
+    width: 100%; /* Define a largura como 100% */
+    overflow: hidden; /* Oculta o conteúdo que transborda */
+    position: relative; /* Define a posição como relativa */
+    max-width: 1000px; /* Define a largura máxima */
+    margin: 20px auto; /* Adiciona margem superior e inferior, e centraliza horizontalmente */
+    display: flex; /* Usa flexbox para o layout */
+    align-items: center; /* Alinha os itens ao centro */
+    height: 490px; /* Define a altura */
+}
+
+.carousel {
+    position: relative; /* Define a posição como relativa */
+    overflow: hidden; /* Oculta o conteúdo que transborda */
+    width: 100%; /* Define a largura como 100% */
+    height: 100%; /* Define a altura como 100% */
+}
+
+.carousel-item {
+    position: absolute; /* Define a posição como absoluta */
+    top: 0; /* Define a posição superior */
+    width: 100%; /* Define a largura como 100% */
+    height: 100%; /* Define a altura como 100% */
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out; /* Adiciona transição para transformação e opacidade */
+    opacity: 0; /* Define a opacidade como 0 */
+    visibility: hidden; /* Define a visibilidade como oculta */
+}
+  
+.carousel-item.active {
+    opacity: 1; /* Define a opacidade como 1 */
+    visibility: visible; /* Define a visibilidade como visível */
+    transform: translateX(0); /* Define a transformação como nenhuma */
+}
+  
+.carousel-item.hidden {
+    opacity: 0; /* Define a opacidade como 0 */
+    visibility: hidden; /* Define a visibilidade como oculta */
+}
+  
+.carousel-item.slide-left {
+    transform: translateX(-100%); /* Move o item para a esquerda */
+}
+  
+.carousel-item.slide-right {
+    transform: translateX(100%); /* Move o item para a direita */
+}
+  
+.photo-section {
+    flex: 1; /* Faz o elemento crescer para preencher o espaço disponível */
+    display: flex; /* Usa flexbox para o layout */
+    justify-content: center; /* Alinha os itens ao centro */
+    align-items: center; /* Alinha os itens ao centro */
+    margin-left: 20px; /* Adiciona margem à esquerda */
+}
+
+.carousel-photo {
+    max-width: 90%; /* Define a largura máxima */
+    height: auto; /* Define a altura automaticamente */
+    border: none; /* Remove a borda */
+    border-radius: 5px; /* Define bordas arredondadas */
+    margin-left: -20px; /* Adiciona margem negativa à esquerda */
+}
+
+.description-section {
+    flex: 1; /* Faz o elemento crescer para preencher o espaço disponível */
+    display: flex; /* Usa flexbox para o layout */
+    flex-direction: column; /* Define a direção dos itens flexíveis */
+    justify-content: center; /* Alinha os itens ao centro */
+    align-items: center; /* Alinha os itens ao centro */
+    margin-left: -120px; /* Adiciona margem negativa à esquerda */
+}
+
+.photo-description {
+    font-size: 1.2rem; /* Define o tamanho da fonte */
+    color: #333; /* Define a cor do texto */
+    background: #fff; /* Define a cor de fundo */
+    padding: 10px 20px; /* Adiciona padding */
+    border-radius: 10px; /* Define bordas arredondadas */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adiciona sombra */
+    border: 1px solid #ddd; /* Define a borda */
+    font-family: 'Courier New', Courier, monospace; /* Define a fonte */
+    max-width: 400px; /* Define a largura máxima */
+    width: 100%; /* Define a largura como 100% */
+    box-sizing: border-box; /* Inclui padding e borda na largura e altura total do elemento */
+    margin-left: -100px; /* Adiciona margem negativa à esquerda */
+}
+
+.prev, .next {
+    cursor: pointer; /* Define o cursor como ponteiro */
+    position: absolute; /* Define a posição como absoluta */
+    top: 50%; /* Define a posição superior */
+    width: auto; /* Define a largura automaticamente */
+    margin-top: -22px; /* Adiciona margem superior negativa */
+    padding: 16px; /* Adiciona padding */
+    color: white; /* Define a cor do texto */
+    font-weight: bold; /* Define o texto como negrito */
+    font-size: 18px; /* Define o tamanho da fonte */
+    transition: 0.6s ease; /* Adiciona transição */
+    border-radius: 0 3px 3px 0; /* Define bordas arredondadas */
+    user-select: none; /* Desabilita a seleção de texto */
+    z-index: 1; /* Define a ordem de empilhamento */
+    background-color: rgba(0,0,0,0.5); /* Define a cor de fundo */
+}
+
+.prev {
+    left: 0; /* Define a posição à esquerda */
+    border-radius: 3px 0 0 3px; /* Define bordas arredondadas */
+}
+
+.next {
+    right: 0; /* Define a posição à direita */
+    border-radius: 3px 0 0 3px; /* Define bordas arredondadas */
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8); /* Altera a cor de fundo ao passar o mouse */
+}
+
+.project-title {
+    font-size: 2rem; /* Define o tamanho da fonte */
+    text-align: left; /* Alinha o texto à esquerda */
+    margin-top: 20px; /* Adiciona margem superior */
+    margin-left: 20px; /* Adiciona margem à esquerda */
+}
+
+.project-title a {
+    color: #000; /* Define a cor do texto */
+    text-decoration: none; /* Remove a decoração do texto */
+    transition: color 0.3s; /* Adiciona transição para a cor */
+}
+
+.project-title a:hover {
+    color: #555; /* Altera a cor do texto ao passar o mouse */
+}
+
+.polaroid-frame {
+    position: relative; /* Define a posição como relativa */
+    display: inline-block; /* Define o display como inline-block */
+    width: 500px; /* Define a largura */
+    height: auto; /* Define a altura automaticamente */
+    margin-left: 0px; /* Adiciona margem à esquerda */
+}
+
+.polaroid-frame .photo {
+    display: block; /* Define o display como block */
+    width: 100%; /* Define a largura como 100% */
+    height: auto; /* Define a altura automaticamente */
+    z-index: 2; /* Define a ordem de empilhamento */
+    position: relative; /* Define a posição como relativa */
+}
+
+.inner-photo-container {
+    position: absolute; /* Define a posição como absoluta */
+    top: 10%; /* Define a posição superior */
+    left: 10%; /* Define a posição à esquerda */
+    width: 80%; /* Define a largura */
+    height: 80%; /* Define a altura */
+    overflow: hidden; /* Oculta o conteúdo que transborda */
+    z-index: 1; /* Define a ordem de empilhamento */
+}
+
+.inner-photo {
+    width: 100%; /* Define a largura como 100% */
+    height: 100%; /* Define a altura como 100% */
+    object-fit: cover; /* Faz a imagem cobrir o contêiner */
+    object-position: center; /* Centraliza a imagem */
+}
+
+.inner-photo-container .inner-photo {
+    width: 63%; /* Define a largura */
+    height: 100%; /* Define a altura como 100% */
+    object-fit: cover; /* Faz a imagem cobrir o contêiner */
+    position: absolute; /* Define a posição como absoluta */
+    z-index: 1; /* Define a ordem de empilhamento */
+    top: 0; /* Define a posição superior */
+    left: 17%; /* Define a posição à esquerda */
+}
+
+.photo-title {
+    align-self: flex-start; /* Alinha o título ao início (esquerda) */
+    font-size: 1.5rem; /* Define o tamanho da fonte */
+    margin-bottom: 10px; /* Adiciona margem inferior */
+    margin-left: 20px; /* Adiciona margem à esquerda */
+}

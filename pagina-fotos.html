@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Photo Collection</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="content">
+    <header>
+      <!-- Título do projeto com link para a página inicial -->
+      <h1 class="project-title"><a href="index.html">Nerdices, <br>Friendos, <br>Etc.</a></h1>
+    </header>
+    <div class="carousel-container">
+        <!-- Botão para slide anterior -->
+        <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+        <div class="carousel" id="carousel">
+          <!-- Itens do carrossel serão injetados aqui pelo JavaScript -->
+        </div>
+        <!-- Botão para próximo slide -->
+        <a class="next" onclick="changeSlide(1)">&#10095;</a>
+      </div>
+    <div class="social-links" style="position: fixed; bottom: 50px; left: 50%; transform: translateX(-50%);">
+      <!-- Links para redes sociais -->
+      <a href="https://github.com/LuLacrd/" target="_blank"><img src="images/Icone Github.png" alt="GitHub"></a>
+      <a href="https://www.linkedin.com/in/luiza-lacerda-3205ab311/" target="_blank"><img src="images/Icone Linkedin.png" alt="LinkedIn"></a>
+      <a href="https://www.instagram.com/lu_lacrd/" target="_blank"><img src="images/Icone Instagram.png" alt="Instagram"></a>
+    </div>
+  </div>
+  <!-- Script para funcionalidade do carrossel -->
+  <script src="carousel.js"></script>
+  <footer>
+    <!-- Rodapé com direitos autorais -->
+    <p>Copyright © 2024 Luiza Lacerda</p>
+  </footer>
+</body>
+</html>
