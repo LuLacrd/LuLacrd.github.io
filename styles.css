@@ -16,7 +16,7 @@ html, body {
 }
 
 .page-title {
-    font-size: 6rem !important; /* Ajusta o tamanho da fonte para ser duas vezes maior */
+    font-size: 6rem; /* Ajusta o tamanho da fonte para ser duas vezes maior */
     font-weight: bold; /* Define o texto como negrito */
     text-align: left; /* Alinha o texto à esquerda */
     margin-top: 20px; /* Adiciona margem superior */
@@ -38,7 +38,13 @@ html, body {
     margin-left: 50px; /* Adiciona margem à esquerda */
 }
 
-.left-section h1 {
+.left-section-index {
+    text-align: left; /* Alinha o texto à esquerda */
+    max-width: 40%; /* Define a largura máxima */
+    margin-left: 50px; /* Adiciona margem à esquerda */
+}
+
+.left-section-index h1 {
     font-size: 3rem; /* Define o tamanho da fonte */
     line-height: 1.2; /* Define a altura da linha */
     font-weight: bold; /* Define o texto como negrito */
@@ -55,7 +61,7 @@ footer {
     padding: 10px; /* Adiciona padding */
 }
 
-.left-section .byline {
+.left-section-index .byline {
     margin-top: 10px; /* Adiciona margem superior */
     font-size: 0.9rem; /* Define o tamanho da fonte */
     color: #555; /* Define a cor do texto */
@@ -80,6 +86,15 @@ footer {
 
 /* Seção Direita */
 .right-section {
+    display: flex; /* Usa flexbox para o layout */
+    flex-direction: column; /* Define a direção dos itens flexíveis */
+    justify-content: center; /* Alinha os itens ao centro */
+    align-items: center; /* Alinha os itens ao centro */
+    margin-right: 50px; /* Adiciona margem à direita */
+    height: 100%; /* Define a altura como 100% */
+}
+
+.right-section-index {
     display: flex; /* Usa flexbox para o layout */
     flex-direction: column; /* Define a direção dos itens flexíveis */
     justify-content: center; /* Alinha os itens ao centro */
@@ -281,6 +296,22 @@ footer {
     position: relative; /* Define a posição como relativa */
 }
 
+.polaroid-frame-index {
+    position: relative; /* Define a posição como relativa */
+    display: inline-block; /* Define o display como inline-block */
+    width: 500px; /* Define a largura */
+    height: auto; /* Define a altura automaticamente */
+    margin-left: 0px; /* Adiciona margem à esquerda */
+}
+
+.polaroid-frame-index .photo {
+    display: block; /* Define o display como block */
+    width: 100%; /* Define a largura como 100% */
+    height: auto; /* Define a altura automaticamente */
+    z-index: 2; /* Define a ordem de empilhamento */
+    position: relative; /* Define a posição como relativa */
+}
+
 .inner-photo-container {
     position: absolute; /* Define a posição como absoluta */
     top: 10%; /* Define a posição superior */
@@ -365,13 +396,28 @@ footer {
       width: 250px;
       height: 350px;
     }
+
+    .polaroid-frame-index {
+        display: block; /* Define o display como block */
+        margin: 0 auto; /* Center horizontally */
+    }
   
     .play-button {
       font-size: 1.5em;
     }
+
+    footer {
+        position: fixed;
+        width: 90%; /* Full width */
+        margin-left: 0; /* Adiciona margem à esquerda */
+        bottom: 0; /* Adiciona margem inferior */
+    }
   }
   
 @media (max-width: 480px) {
+    .left-section-index {
+        margin-left: -100px; /* Adiciona margem à esquerda */
+    }
     .container {
       flex-direction: column;
       align-items: center;
@@ -442,4 +488,23 @@ footer {
         margin-left: -30px; /* Adjust margin */
         margin-bottom: -10px; /* Adjust margin */
     }
+
+    .right-section-index {
+        margin-right: 0px;
+    }
+    .polaroid-frame-index {
+        margin-left: 100px; /* Adiciona margem à esquerda */
+    }
+
+    .play-button {
+        margin-left: 100px; /* Adiciona margem à esquerda */
+    }
+
+    footer {
+        position: fixed;
+        width: 90%; /* Full width */
+        margin-left: 0; /* Adiciona margem à esquerda */
+        bottom: 0; /* Adiciona margem inferior */
+    }
+    
 }
