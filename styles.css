@@ -314,3 +314,132 @@ footer {
     margin-bottom: 10px; /* Adiciona margem inferior */
     margin-left: 20px; /* Adiciona margem à esquerda */
 }
+
+@media (max-width: 768px) {
+    .project-title {
+      font-size: 1.5em;
+    }
+  
+    .prev, .next {
+      font-size: 14px;
+      padding: 10px;
+    }
+  
+    .social-links img {
+      width: 30px;
+      height: 30px;
+    }
+  }
+  
+@media (max-width: 480px) {
+    .project-title {
+      font-size: 1.2em;
+    }
+  
+    .prev, .next {
+      font-size: 12px;
+      padding: 8px;
+    }
+  
+    .social-links img {
+      width: 25px;
+      height: 25px;
+    }
+  }
+  
+@media (max-width: 768px) {
+    .page-title {
+      font-size: 1.5em;
+    }
+  
+    .byline {
+      font-size: 0.9em;
+    }
+  
+    .social-links img {
+      width: 30px;
+      height: 30px;
+    }
+  
+    .polaroid-frame {
+      width: 250px;
+      height: 350px;
+    }
+  
+    .play-button {
+      font-size: 1.5em;
+    }
+  }
+  
+@media (max-width: 480px) {
+    .container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .page-title {
+      font-size: 1.2em;
+    }
+  
+    .byline {
+      font-size: 0.8em;
+    }
+  
+    .social-links img {
+      width: 25px;
+      height: 25px;
+    }
+  
+    .polaroid-frame {
+      width: 200px;
+      height: 300px;
+    }
+  
+    .play-button {
+      font-size: 1.2em;
+    }
+  
+    .polaroid-frame {
+      width: 150px;
+      height: 200px;
+    }
+  
+    .inner-photo-container {
+        top: 5%;
+        left: 25%;
+        width: 90%;
+        height: 40%;
+    }
+    
+    .inner-photo {
+        width: auto;
+        height: 100%;
+        object-fit: cover;
+        object-position: center top;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%) scale(1.2);
+      }
+    
+    .description-section {
+        margin-left: 0; /* Reset margin */
+        padding: 10px; /* Add padding */
+        width: 100%; /* Full width */
+        box-sizing: border-box; /* Include padding and border in width */
+        height: 80%; /* Adjust height */
+    }
+
+    .photo-description {
+        margin-left: -35%; /* Reset margin */
+        font-size: 0.7rem; /* Adjust font size */
+        padding: 5px 5px; /* Adjust padding */
+        max-width: 100%; /* Full width */
+        height: -50%; /* Adjust height */
+    }
+    .photo-title {
+        font-size: 1rem; /* Make font smaller */
+        margin-left: -30px; /* Adjust margin */
+        margin-bottom: -10px; /* Adjust margin */
+    }
+}
