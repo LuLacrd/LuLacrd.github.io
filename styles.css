@@ -524,10 +524,7 @@ footer {
     }
 
     .inner-photo-container-index {
-        top: 5%;
-        left: 25%;
-        width: 90%;
-        height: 40%;
+        top: 7%;
     }
     
     .inner-photo {
@@ -589,9 +586,10 @@ footer {
     
     .polaroid-frame-index {
         display: block;
-        margin: 0 auto; /* Center horizontally */
-        width: 300px; /* Make the frame bigger */
-        height: 400px; /* Make the frame bigger */
+        margin: 0 auto;
+        width: 518px;
+        height: 190px;
+        margin-left: 270px;
     }
 
     .play-button {
@@ -613,11 +611,11 @@ footer {
         width: auto;
         height: 100%;
         object-fit: cover;
-        object-position: center top; /* Center the image horizontally and move it to the top */
+        object-position: center top;
         position: absolute;
         top: 0;
-        left: 20%;
-        transform: translateX(-50%) scale(1.2); /* Center the image horizontally */
+        left: 18%;
+        transform: translateX(-50%) scale(1.2);
     }
 
     .right-section-index .photo {
