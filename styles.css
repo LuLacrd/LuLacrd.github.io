@@ -11,6 +11,8 @@ body {
 }
 
 html, body {
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    overflow-y: hidden; /* Prevent horizontal scrolling */
     height: 100%; /* Define a altura como 100% */
     margin: 0; /* Remove a margem padrão */
 }
@@ -95,13 +97,13 @@ footer {
 }
 
 .right-section-index {
-    display: flex; /* Usa flexbox para o layout */
-    flex-direction: column; /* Define a direção dos itens flexíveis */
-    justify-content: center; /* Alinha os itens ao centro */
-    align-items: center; /* Alinha os itens ao centro */
-    margin-right: 50px; /* Adiciona margem à direita */
-    height: 100%; /* Define a altura como 100% */
-}
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-right: 0;
+    height: 100%;
+  }
 
 .images {
     display: flex; /* Usa flexbox para o layout */
@@ -120,19 +122,21 @@ footer {
 
 /* Botão Play */
 .play-button {
-    display: inline-block; /* Define o display como inline-block */
-    font-size: 2rem; /* Define o tamanho da fonte */
-    color: #fff; /* Define a cor do texto */
-    background: #000; /* Define a cor de fundo */
-    width: 60px; /* Define a largura */
-    height: 60px; /* Define a altura */
-    line-height: 60px; /* Define a altura da linha */
-    text-align: center; /* Alinha o texto ao centro */
-    border-radius: 50%; /* Define bordas arredondadas */
-    text-decoration: none; /* Remove a decoração do texto */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Adiciona sombra */
-    transition: background 0.3s; /* Adiciona transição para o fundo */
-}
+    display: block;
+    margin: 20px auto; /* Center horizontally and add margin */
+    text-align: center;
+    font-size: 2rem;
+    color: #fff;
+    background: #000;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    border-radius: 50%;
+    text-decoration: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    transition: background 0.3s;
+  }
 
 .play-button:hover {
     background: #333; /* Altera a cor de fundo ao passar o mouse */
@@ -150,7 +154,7 @@ footer {
     overflow: hidden; /* Oculta o conteúdo que transborda */
     position: relative; /* Define a posição como relativa */
     max-width: 1000px; /* Define a largura máxima */
-    margin: 20px auto; /* Adiciona margem superior e inferior, e centraliza horizontalmente */
+    margin: -40px auto; /* Adiciona margem superior e inferior, e centraliza horizontalmente */
     display: flex; /* Usa flexbox para o layout */
     align-items: center; /* Alinha os itens ao centro */
     height: 490px; /* Define a altura */
@@ -322,11 +326,39 @@ footer {
     z-index: 1; /* Define a ordem de empilhamento */
 }
 
+.inner-photo-container-index {
+    position: absolute; /* Define a posição como absoluta */
+    top: 10%; /* Define a posição superior */
+    left: 10%; /* Define a posição à esquerda */
+    width: 80%; /* Define a largura */
+    height: 80%; /* Define a altura */
+    overflow: hidden; /* Oculta o conteúdo que transborda */
+    z-index: 1; /* Define a ordem de empilhamento */
+}
+
 .inner-photo {
     width: 100%; /* Define a largura como 100% */
     height: 100%; /* Define a altura como 100% */
     object-fit: cover; /* Faz a imagem cobrir o contêiner */
     object-position: center; /* Centraliza a imagem */
+}
+
+.inner-photo-index {
+    width: 100%; /* Define a largura como 100% */
+    height: 100%; /* Define a altura como 100% */
+    object-fit: cover; /* Faz a imagem cobrir o contêiner */
+    object-position: center; /* Centraliza a imagem */
+}
+
+.inner-photo-container-index .inner-photo-index {
+    width: auto;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top; /* Center the image horizontally and move it to the top */
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%) scale(1.2); /* Center the image horizontally */
 }
 
 .inner-photo-container .inner-photo {
@@ -360,27 +392,9 @@ footer {
       width: 30px;
       height: 30px;
     }
-  }
-  
-@media (max-width: 480px) {
-    .project-title {
-      font-size: 1.2em;
-    }
-  
-    .prev, .next {
-      font-size: 12px;
-      padding: 8px;
-    }
-  
-    .social-links img {
-      width: 25px;
-      height: 25px;
-    }
-  }
-  
-@media (max-width: 768px) {
+
     .page-title {
-      font-size: 1.5em;
+      font-size: 1em;
     }
   
     .byline {
@@ -412,19 +426,75 @@ footer {
         margin-left: 0; /* Adiciona margem à esquerda */
         bottom: 0; /* Adiciona margem inferior */
     }
-  }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Center all items inside */
+        justify-content: space-between; /* Space out items */
+        height: 100vh; /* Full viewport height */
+    }
+
+    .left-section-index {
+        margin-left: 0;
+        align-self: center; /* Center horizontally */
+        font-size: 0.8em; /* Make text smaller */
+    }
+
+    .right-section-index {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Center all items inside */
+        justify-content: center; /* Center all items inside */
+        margin: 0 auto; /* Center the section itself */
+        align-self: center; /* Center horizontally */
+        font-size: 0.8em; /* Make text smaller */
+        max-width: 100%; /* Ensure it doesn't exceed the viewport width */
+    }
+
+    .polaroid-frame-index {
+        display: block;
+        margin: 0 auto; /* Center horizontally */
+        width: 200px; /* Make the frame smaller */
+        height: 280px; /* Make the frame smaller */
+    }
+
+    .play-button {
+        display: block;
+        margin: 0 auto; /* Center horizontally */
+        margin-left: 120px;
+        width: 40px; /* Make the button smaller */
+        height: 40px; /* Make the button smaller */
+        font-size: 1rem; /* Make the text smaller */
+    }
+    .right-section-index .photo {
+        width: 60%; /* Make the photo smaller */
+    }
+    .right-section-index .play-button {
+        width: 40px; /* Make the play button smaller */
+        height: 40px;
+        line-height: 40px;
+        font-size: 1rem;
+    }
+}
   
 @media (max-width: 480px) {
-    .left-section-index {
-        margin-left: -100px; /* Adiciona margem à esquerda */
-    }
-    .container {
-      flex-direction: column;
-      align-items: center;
+    .project-title {
+      font-size: 1.2em;
     }
   
+    .prev, .next {
+      font-size: 12px;
+      padding: 8px;
+    }
+  
+    .social-links img {
+      width: 25px;
+      height: 25px;
+    }
+
     .page-title {
-      font-size: 1.2em;
+      font-size: 1em;
     }
   
     .byline {
@@ -441,16 +511,19 @@ footer {
       height: 300px;
     }
   
-    .play-button {
-      font-size: 1.2em;
-    }
-  
     .polaroid-frame {
       width: 150px;
       height: 200px;
     }
   
     .inner-photo-container {
+        top: 5%;
+        left: 25%;
+        width: 90%;
+        height: 40%;
+    }
+
+    .inner-photo-container-index {
         top: 5%;
         left: 25%;
         width: 90%;
@@ -489,18 +562,44 @@ footer {
         margin-bottom: -10px; /* Adjust margin */
     }
 
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Center all items inside */
+        justify-content: space-between; /* Space out items */
+        height: 100vh; /* Full viewport height */
+    }
+
+    .left-section-index {
+        margin-left: 0;
+        align-self: center; /* Center horizontally */
+        font-size: 0.8em; /* Make text smaller */
+    }
+
     .right-section-index {
         display: flex;
         flex-direction: column;
         align-items: center; /* Center all items inside */
-        margin-right: -100px;
+        justify-content: center; /* Center all items inside */
+        margin: 0 auto; /* Center the section itself */
+        align-self: center; /* Center horizontally */
+        font-size: 0.8em; /* Make text smaller */
+        max-width: 100%; /* Ensure it doesn't exceed the viewport width */
     }
+    
     .polaroid-frame-index {
-        margin-left: 100px; /* Adiciona margem à esquerda */
+        display: block;
+        margin: 0 auto; /* Center horizontally */
+        width: 300px; /* Make the frame bigger */
+        height: 400px; /* Make the frame bigger */
     }
 
     .play-button {
-        margin-left: 100px; /* Adiciona margem à esquerda */
+        display: block;
+        margin: 0 auto; /* Center horizontally */
+        width: 30px; /* Make the button smaller */
+        height: 30px; /* Make the button smaller */
+        font-size: 0.8rem; /* Make the text smaller */
     }
 
     footer {
@@ -509,5 +608,25 @@ footer {
         margin-left: 0; /* Adiciona margem à esquerda */
         bottom: 0; /* Adiciona margem inferior */
     }
-    
+
+    .inner-photo-container-index .inner-photo-index {
+        width: auto;
+        height: 100%;
+        object-fit: cover;
+        object-position: center top; /* Center the image horizontally and move it to the top */
+        position: absolute;
+        top: 0;
+        left: 20%;
+        transform: translateX(-50%) scale(1.2); /* Center the image horizontally */
+    }
+
+    .right-section-index .photo {
+        width: 50%; /* Make the photo smaller */
+    }
+    .right-section-index .play-button {
+        width: 30px; /* Make the play button smaller */
+        height: 30px;
+        line-height: 30px;
+        font-size: 0.8rem;
+    }
 }
