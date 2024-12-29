@@ -424,7 +424,7 @@ footer {
         position: fixed;
         width: 100%; /* Full width */
         margin-left: 0; /* Adiciona margem à esquerda */
-        bottom: 0; /* Adiciona margem inferior */
+        bottom: -10px; /* Adiciona margem inferior */
     }
 
     .container {
@@ -604,7 +604,7 @@ footer {
         position: fixed;
         width: 100%; /* Full width */
         margin-left: 0; /* Adiciona margem à esquerda */
-        bottom: 0; /* Adiciona margem inferior */
+        bottom: -10px; /* Adiciona margem inferior */
     }
 
     .inner-photo-container-index .inner-photo-index {
